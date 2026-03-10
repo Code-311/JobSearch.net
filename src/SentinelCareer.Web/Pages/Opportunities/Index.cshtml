@@ -1,0 +1,37 @@
+@page
+@model SentinelCareer.Web.Pages.Opportunities.IndexModel
+<h2>Opportunities Triage</h2>
+<form method="get" class="card">
+    <label>Location <input type="text" name="Location" value="@Model.Location" /></label>
+    <label>Company <input type="text" name="Company" value="@Model.Company" /></label>
+    <label>Min Score <input type="number" name="MinScore" value="@Model.MinScore" /></label>
+    <button type="submit">Apply</button>
+</form>
+
+@foreach (var item in Model.Items) {
+var isHigh = (item.LatestScore?.CompositeScore ?? 0) >= 80;
+<div class="card" style="border-left: 6px solid @(isHigh ? "#137333" : "#666")">
+    <b>@item.Title</b>
+    <div>@item.Company?.Name - @item.Location?.City (@item.Location?.Country)</div>
+    <div>Provenance: @item.ExternalId | Published: @item.PublishedAt.ToString("yyyy-MM-dd") | India Priority: @item.IsIndiaPriority</div>
+    <div>Score: <strong>@(item.LatestScore?.CompositeScore ?? 0)</strong> | Δ <strong>@item.ScoreDelta</strong> | Band: <strong>@SentinelCareer.Web.Pages.Opportunities.IndexModel.ScoreBand(item)</strong></div>
+    <div>Why this scored: @(item.LatestScore?.Explanation ?? "Not yet scored")</div>
+    <div>Next action: @(item.LatestScore?.RecommendedNextAction ?? "Pending scoring")</div>
+    <div>Operator decision: <strong>@item.Status</strong> | Notes: @item.OperatorNotes</div>
+
+    <form method="post" asp-page-handler="Decision">
+        <input type="hidden" name="id" value="@item.Id" />
+        <select name="decision">
+            <option value="pursue">Pursue</option>
+            <option value="review">Review</option>
+            <option value="ignore">Ignore</option>
+        </select>
+        <input type="text" name="notes" placeholder="Operator notes" />
+        <button type="submit">Save</button>
+    </form>
+
+    @if (Model.Histories.TryGetValue(item.Id, out var history) && history.Any()) {
+        <div>Score history: @string.Join(" -> ", history.Select(h => h.CompositeScore))</div>
+    }
+</div>
+}

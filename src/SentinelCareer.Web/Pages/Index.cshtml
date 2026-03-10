@@ -1,0 +1,6 @@
+@page
+@model IndexModel
+<div class="card"><h2>Home Summary</h2><p>Total opportunities: @Model.Total</p></div>
+<div class="card" style="border-left: 6px solid #137333"><h3>Pursue Immediately (80+)</h3><p>@Model.HighPriority</p><p>New 24h 80+: <strong>@Model.NewHighPriority</strong></p></div>
+<div class="card"><h3>Manual Review (65-79)</h3><p>@Model.ManualReview</p></div>
+<div class="card"><h3>Track Only (&lt;65)</h3><p>@Model.TrackOnly</p></div>

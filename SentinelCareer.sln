@@ -1,0 +1,39 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentinelCareer.Contracts", "src/SentinelCareer.Contracts/SentinelCareer.Contracts.csproj", "{10000000-0000-0000-0000-000000000001}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentinelCareer.Domain", "src/SentinelCareer.Domain/SentinelCareer.Domain.csproj", "{10000000-0000-0000-0000-000000000002}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentinelCareer.Application", "src/SentinelCareer.Application/SentinelCareer.Application.csproj", "{10000000-0000-0000-0000-000000000003}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentinelCareer.Infrastructure", "src/SentinelCareer.Infrastructure/SentinelCareer.Infrastructure.csproj", "{10000000-0000-0000-0000-000000000004}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentinelCareer.Web", "src/SentinelCareer.Web/SentinelCareer.Web.csproj", "{10000000-0000-0000-0000-000000000005}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentinelCareer.Workers", "src/SentinelCareer.Workers/SentinelCareer.Workers.csproj", "{10000000-0000-0000-0000-000000000006}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentinelCareer.Domain.Tests", "tests/SentinelCareer.Domain.Tests/SentinelCareer.Domain.Tests.csproj", "{10000000-0000-0000-0000-000000000007}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentinelCareer.Application.Tests", "tests/SentinelCareer.Application.Tests/SentinelCareer.Application.Tests.csproj", "{10000000-0000-0000-0000-000000000008}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentinelCareer.Infrastructure.Tests", "tests/SentinelCareer.Infrastructure.Tests/SentinelCareer.Infrastructure.Tests.csproj", "{10000000-0000-0000-0000-000000000009}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentinelCareer.IntegrationTests", "tests/SentinelCareer.IntegrationTests/SentinelCareer.IntegrationTests.csproj", "{10000000-0000-0000-0000-00000000000A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentinelCareer.Web.SmokeTests", "tests/SentinelCareer.Web.SmokeTests/SentinelCareer.Web.SmokeTests.csproj", "{10000000-0000-0000-0000-00000000000B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SentinelCareer.Workers.Tests", "tests/SentinelCareer.Workers.Tests/SentinelCareer.Workers.Tests.csproj", "{10000000-0000-0000-0000-00000000000C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
